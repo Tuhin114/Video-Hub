@@ -1,11 +1,10 @@
-import { Button } from '@chakra-ui/react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
 
 function App() {
   return (
     <Router>
-      <div>Hello</div>
-      <Button colorScheme="whatsapp">Click</Button>
+      <Header />
       <Routes>
         <Route />
       </Routes>
