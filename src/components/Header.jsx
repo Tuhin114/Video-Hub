@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
@@ -39,26 +38,36 @@ const Header = () => {
           <DrawerHeader>VIDEO HUB</DrawerHeader>
           <DrawerBody>
             <VStack alignItems={'flex-start'}>
-              <Button variant={'ghost'} colorScheme="purple">
+              <Button onClick={onClose} variant={'ghost'} colorScheme="purple">
                 <HashLink to={'/'}>Home</HashLink>
               </Button>
-              <Button variant={'ghost'} colorScheme="purple">
+              <Button onClick={onClose} variant={'ghost'} colorScheme="purple">
                 <HashLink to={'/videos'}>Videos</HashLink>
               </Button>
-              <Button variant={'ghost'} colorScheme="purple">
+              <Button onClick={onClose} variant={'ghost'} colorScheme="purple">
                 <HashLink to={'/videos?category=free'}>Free Videos</HashLink>
               </Button>
-              <Button variant={'ghost'} colorScheme="purple">
+              <Button onClick={onClose} variant={'ghost'} colorScheme="purple">
                 <HashLink to={'/upload'}>Upload Video</HashLink>
               </Button>
             </VStack>
 
-            <HStack pos={'absolute'} bottom={10} left={0}>
-              <Button colorScheme="purple" variant={'outline'}>
-                <HashLink>Log In</HashLink>
+            <HStack
+              pos={'absolute'}
+              bottom={10}
+              left={0}
+              w={'full'}
+              justifyContent={'space-evenly'}
+            >
+              <Button
+                onClick={onClose}
+                colorScheme="purple"
+                variant={'outline'}
+              >
+                <HashLink to={'/login'}>Log In</HashLink>
               </Button>
-              <Button colorScheme="purple">
-                <HashLink>Sign Up</HashLink>
+              <Button onClick={onClose} colorScheme="purple">
+                <HashLink to={'/signup'}>Sign Up</HashLink>
               </Button>
             </HStack>
           </DrawerBody>
