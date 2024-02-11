@@ -20,6 +20,7 @@ const Header = () => {
     <>
       <Button
         pos={'fixed'}
+        zIndex={'overlay'}
         top={'4'}
         left={'4'}
         colorScheme="purple"
